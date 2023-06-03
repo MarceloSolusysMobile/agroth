@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text(
-          'Estufas',
+          'AGRO TH',
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
@@ -28,37 +28,59 @@ class _HomeState extends State<Home> {
               ))
         ],
       ),
-      body: const SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 20,
-            ),
-            CardEstufa(
-              title: 'ESTUFA DE TOMATE',
-              subTitle: 'JARDIM-PR',
-              temp: 45,
-              img: 'images/estufa1.jpg',
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            CardEstufa(
-              title: 'ESTUFA DE MORANGO',
-              subTitle: 'iVAIPORÃ-PR',
-              temp: 45,
-              img: 'images/estufa2.jpg',
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            CardEstufa(
-              title: 'ESTUFA DE TOMATE',
-              subTitle: 'LIDIANÓPOLIS-PR',
-              temp: 45,
-              img: 'images/estufa3.jpg',
-            )
-          ],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color.fromARGB(255, 8, 68, 10),
+              Color.fromARGB(255, 151, 224, 154),
+            ],
+          ),
+        ),
+        child: const SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                'MINHAS ESTUFAS',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CardEstufa(
+                title: 'ESTUFA DE TOMATE',
+                subTitle: 'JARDIM-PR',
+                temp: 45,
+                img: 'images/estufa2.jpg',
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CardEstufa(
+                title: 'ESTUFA DE MORANGO',
+                subTitle: 'iVAIPORÃ-PR',
+                temp: 45,
+                img: 'images/estufa2.jpg',
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CardEstufa(
+                title: 'ESTUFA DE TOMATE',
+                subTitle: 'LIDIANÓPOLIS-PR',
+                temp: 45,
+                img: 'images/estufa2.jpg',
+              )
+            ],
+          ),
         ),
       ),
     );
