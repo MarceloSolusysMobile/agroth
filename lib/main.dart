@@ -1,4 +1,4 @@
-import 'package:agroth/scrrens/home.dart';
+import 'package:agroth/scrrens/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const Home()
+      home: const Login()
     );
   }
 }

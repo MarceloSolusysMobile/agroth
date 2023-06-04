@@ -15,13 +15,25 @@ class CardEstufa extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Color getColorTemp(double temp) {
+      if (temp >= 35) {
+        return Colors.red;
+      } else if (temp >= 20) {
+        return Colors.green;
+      } else {
+        return Colors.blue;
+      }
+    }
+
     return Card(
       margin: const EdgeInsets.all(10),
       color: Colors.black.withOpacity(0.8),
       elevation: 10,
       child: Column(
         children: [
-          const SizedBox(height: 15,),
+          const SizedBox(
+            height: 15,
+          ),
           Padding(
             padding: const EdgeInsets.all(4.0),
             child: Image.asset(img),
@@ -64,9 +76,9 @@ class CardEstufa extends StatelessWidget {
                   color: Colors.grey[800],
                   child: Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.thermostat,
-                        color: Colors.white,
+                        color: getColorTemp(temp),
                       ),
                       Text(
                         '$temp °C',

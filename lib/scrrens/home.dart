@@ -1,4 +1,5 @@
 import 'package:agroth/scrrens/mywidgets/card_estufa.dart';
+import 'package:agroth/scrrens/mywidgets/menu_drawer.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -8,26 +9,29 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeState extends State<Home> {  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Colors.black,
-        title: const Text(
-          'AGRO TH',
-          style: TextStyle(color: Colors.white),
+        title: Image.asset(
+          'images/logo.png',
+          fit: BoxFit.cover,
+          height: AppBar().preferredSize.height,
         ),
         centerTitle: true,
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.person,
-                color: Colors.white,
-              ))
+            onPressed: () {},
+            icon: const Icon(
+              Icons.person,
+            ),
+          )
         ],
       ),
+      drawer: const MenuDrawer(),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -56,10 +60,10 @@ class _HomeState extends State<Home> {
                 height: 20,
               ),
               CardEstufa(
-                title: 'ESTUFA DE TOMATE',
+                title: 'TOMATES VERDES',
                 subTitle: 'JARDIM-PR',
-                temp: 45,
-                img: 'images/estufa2.jpg',
+                temp: 20,
+                img: 'images/estufa1.jpg',
               ),
               SizedBox(
                 height: 20,
@@ -71,13 +75,13 @@ class _HomeState extends State<Home> {
                 img: 'images/estufa2.jpg',
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               CardEstufa(
                 title: 'ESTUFA DE TOMATE',
                 subTitle: 'LIDIANÓPOLIS-PR',
                 temp: 45,
-                img: 'images/estufa2.jpg',
+                img: 'images/estufa3.jpg',
               )
             ],
           ),
